@@ -1,0 +1,45 @@
+# ==========================================
+# Variáveis de Ambiente e Dados Sensíveis
+# ==========================================
+.env
+.env.local
+.env.*.local
+*.pem
+
+# ==========================================
+# Python (Dependências e Cache)
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# ==========================================
+# Testes e Cobertura (Pytest)
+# ==========================================
+.pytest_cache/
+.tox/
+.coverage
+htmlcov/
+coverage.xml
+
+# ==========================================
+# Editores de Código e IDEs
+# ==========================================
+# Arquivos de swap do Neovim/Vim
+*.swp
+*.swo
+*~
+# VS Code
+.vscode/
+# IntelliJ / Android Studio
+.idea/
+*.iml
+
+# ==========================================
+# Sistema Operacional
+# ==========================================
+.DS_Store
+Thumbs.db
