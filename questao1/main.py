@@ -69,7 +69,7 @@ def main() -> None:
             case _:
                 raise ValueError()
 
-    except Exception as e:
+    except Exception:
         print()
         print("=-" * 15 + "=")
         print("Você digitou um valor inválido.\nTente novamente.")
