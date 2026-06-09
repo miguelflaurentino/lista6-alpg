@@ -19,51 +19,34 @@ def values():
     return (a, b)
 
 
-def main() -> None:
-
-    data = [
-        ["1", "Soma"],
-        ["2", "Subtração"],
-        ["3", "Multiplicação"],
-        ["4", "Divisão"],
-        ["5", "Sair"],
-    ]
-
+def calculator(operation, a, b):
     try:
-        print(tabulate(data, headers=[" ", "Opção"], tablefmt="simple"))
-        opcao = int(input("Qual operação deseja fazer? "))
-
-        if opcao < 1 or opcao > 5:
+        if operation < 1 or operation > 5:
             raise ValueError()
 
-        match opcao:
+        match operation:
             case 1:
-                a, b = values()
                 print(sum(a, b))
                 print()
-                main()
             case 2:
-                a, b = values()
                 print(subtraction(a, b))
                 print()
-                main()
             case 3:
-                a, b = values()
                 print(multiply(a, b))
                 print()
-                main()
             case 4:
                 try:
-                    a, b = values()
                     if b == 0:
                         raise ZeroDivisionError()
 
                     print(division(a, b))
                 except ZeroDivisionError:
-                    print("Você não pode digitar um número por zero.\nTente novamente.")
+                    print()
+                    print("=-" * 15 + "=")
+                    print("Você não pode dividir um número por zero.\nTente novamente.")
+                    print("=-" * 15 + "=")
                 finally:
                     print()
-                    main()
             case 5:
                 return print("Fim do programa!")
             case _:
@@ -76,7 +59,27 @@ def main() -> None:
         print("=-" * 15 + "=")
         print()
 
-        main()
+
+def main() -> None:
+
+    data = [
+        ["1", "Soma"],
+        ["2", "Subtração"],
+        ["3", "Multiplicação"],
+        ["4", "Divisão"],
+        ["5", "Sair"],
+    ]
+
+    print(tabulate(data, headers=[" ", "Opção"], tablefmt="simple"))
+    opcao = int(input("Qual operação deseja fazer? "))
+
+    if opcao == 5:
+        return print("Fim do programa.")
+
+    a, b = values()
+    calculator(opcao, a, b)
+
+    main()
 
 
 main()
