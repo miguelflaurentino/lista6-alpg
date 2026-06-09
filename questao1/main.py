@@ -32,10 +32,10 @@ def main() -> None:
     try:
         print(tabulate(data, headers=[" ", "Opção"], tablefmt="simple"))
         opcao = int(input("Qual operação deseja fazer? "))
-        
+
         if opcao < 1 or opcao > 5:
             raise ValueError()
-    
+
         match opcao:
             case 1:
                 a, b = values()
@@ -68,7 +68,6 @@ def main() -> None:
                 return print("Fim do programa!")
             case _:
                 raise ValueError()
-
 
     except Exception as e:
         print()
