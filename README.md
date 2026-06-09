@@ -1,6 +1,8 @@
 # Projeto de Questões - Faculdade
 
-Este é um projeto simples desenvolvido em Python que contém um conjunto de questões acadêmicas. A validação das soluções é feita de forma automatizada por meio de testes com o **Pytest**.
+Este é um projeto simples desenvolvido em Python que contém um conjunto de
+questões acadêmicas. A validação das soluções é feita de forma automatizada por
+meio de testes com o **Pytest**.
 
 ## 🚀 Pré-requisitos
 
@@ -21,7 +23,9 @@ cd lista6-alpg
 
 ### 2. Configurar a versão correta do Python
 
-Como o projeto utiliza o `mise`, execute o comando abaixo para garantir que a versão do Python especificada no arquivo `.mise.toml` esteja instalada e ativa no diretório:
+Como o projeto utiliza o `mise`, execute o comando abaixo para garantir que a
+versão do Python especificada no arquivo `.mise.toml` esteja instalada e ativa
+no diretório:
 
 ```bash
 mise install
@@ -55,7 +59,8 @@ pip install -r requirements.txt
 
 ## 🧪 Executando os Testes
 
-Para rodar todas as questões e verificar as respostas, basta executar o comando do Pytest na raiz do projeto:
+Para rodar todas as questões e verificar as respostas, basta executar o comando
+do Pytest na raiz do projeto:
 
 ```bash
 pytest
