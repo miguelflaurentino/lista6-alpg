@@ -77,7 +77,7 @@ def main() -> None:
 
         if opcao in (1, 2, 3, 4):
             a, b = values()
-            calculator(opcao, a, b)
+            print(calculator(opcao, a, b))
         else:
             print("Você digitou um valor inválido.\nTente novamente.")
 
