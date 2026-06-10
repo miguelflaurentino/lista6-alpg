@@ -26,38 +26,26 @@ def calculator(operation, a, b):
 
         match operation:
             case 1:
-                print(sum(a, b))
-                print()
+                return sum(a, b)
             case 2:
-                print(subtraction(a, b))
-                print()
+                return subtraction(a, b)
             case 3:
-                print(multiply(a, b))
-                print()
+                return multiply(a, b)
             case 4:
                 try:
                     if b == 0:
                         raise ZeroDivisionError()
 
-                    print(division(a, b))
+                    return division(a, b)
                 except ZeroDivisionError:
-                    print()
-                    print("=-" * 15 + "=")
-                    print("Você não pode dividir um número por zero.\nTente novamente.")
-                    print("=-" * 15 + "=")
-                finally:
-                    print()
+                    return "Você não pode dividir um número por zero.\nTente novamente."
             case 5:
-                return print("Fim do programa!")
+                return "Fim do programa!"
             case _:
                 raise ValueError()
 
-    except Exception:
-        print()
-        print("=-" * 15 + "=")
-        print("Você digitou um valor inválido.\nTente novamente.")
-        print("=-" * 15 + "=")
-        print()
+    except ValueError:
+        return "Você digitou um valor inválido.\nTente novamente."
 
 
 def main() -> None:
@@ -70,16 +58,30 @@ def main() -> None:
         ["5", "Sair"],
     ]
 
-    print(tabulate(data, headers=[" ", "Opção"], tablefmt="simple"))
-    opcao = int(input("Qual operação deseja fazer? "))
+    while True:
+        try:
+            print(tabulate(data, headers=[" ", "Opção"], tablefmt="simple"))
+            opcao = int(input("Qual operação deseja fazer? "))
 
-    if opcao == 5:
-        return print("Fim do programa.")
+            if opcao < 1 or opcao > 5:
+                raise ValueError()
 
-    a, b = values()
-    calculator(opcao, a, b)
+        except ValueError:
+            print("Você digitou um valor inválido.\nTente novamente.")
+            print()
+            continue
 
-    main()
+        if opcao == 5:
+            print("Fim do programa.")
+            break
+
+        if opcao in (1, 2, 3, 4):
+            a, b = values()
+            calculator(opcao, a, b)
+        else:
+            print("Você digitou um valor inválido.\nTente novamente.")
+
+        print()
 
 
 main()
