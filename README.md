@@ -88,7 +88,7 @@ pytest -v
 │   └── outros_arquivos.py    # Outros módulos usados na questão
 │
 └── questao2/           # Estrutura se repete para as demais questões...
-    ├── main.py
+    ├── arquivo.py
     └── test_logica.py
 
 ```
