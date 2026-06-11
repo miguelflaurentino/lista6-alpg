@@ -1,6 +1,6 @@
 def validar_idade(idade: int) -> bool:
     if idade < 0 or idade > 120:
-        raise ValueError("Idade inválida.")
+        raise ValueError("Idade inválida")
 
     return True
 
