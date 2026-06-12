@@ -1,4 +1,4 @@
-# Projeto de Questões - Faculdade
+# Lista de Questões 6 de Algoritmos e Lógica de Programação - Bacharelado em Sistemas de Informação
 
 Este é um projeto simples desenvolvido em Python que contém um conjunto de
 questões acadêmicas. A validação das soluções é feita de forma automatizada por
