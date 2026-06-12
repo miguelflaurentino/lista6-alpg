@@ -14,7 +14,7 @@ def calcular_media(n1: float, n2: float, n3: float) -> float:
 
 def main():
     try:
-        print("Type the three grades separated between spaces.")
+        print("Type the three grades separated by spaces.")
         print("The grades must be between 0 and 10.")
         n1, n2, n3 = input("Type here: ").split(" ")
         n1 = float(n1)
@@ -24,7 +24,7 @@ def main():
         media = calcular_media(n1, n2, n3)
         print(round(media, 2) if media - int(media) > 0 else round(media, 1))
     except ValueError:
-        print("You've typed a wrong value. Try again.")
+        print("You've typed an invalid value. Try again.")
 
 
 if __name__ == "__main__":
