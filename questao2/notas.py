@@ -1,4 +1,4 @@
-def validar_nota(nota):
+def validar_nota(nota: float) -> bool:
     if nota < 0 or nota > 10:
         return False
 
@@ -7,7 +7,7 @@ def validar_nota(nota):
 
 def calcular_media(n1: float, n2: float, n3: float) -> float:
     if not validar_nota(n1) or not validar_nota(n2) or not validar_nota(n3):
-        raise ValueError("Invalid grades grades were detected.")
+        raise ValueError("Invalid grades were detected.")
 
     return round((n1 + n2 + n3) / 3, 2)
 
@@ -28,4 +28,3 @@ def main():
 
 
 main()
-
