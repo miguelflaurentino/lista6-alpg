@@ -27,4 +27,5 @@ def main():
         print("You've typed a wrong value. Try again.")
 
 
-main()
+if __name__ == "__main__":
+    main()
